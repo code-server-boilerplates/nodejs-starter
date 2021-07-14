@@ -1,0 +1,40 @@
+{
+    "name": "@code-server-boilerplates/nodejs-starter",
+    "version": "0.1.0",
+    "description": "Tools and scripts for the template",
+    "scripts": {
+      "prepare": "husky install",
+      "commit": "cz --signoff",
+      "build:buildkit": "DOCKER_BUILDKIT=1 docker build --tag registry.repohub.dev/code-server-boilerplates/nodejs-starter .",
+      "build:no-buildkit": "DOCKER_BUILDKIT=0 docker build --tag registry.repohub.dev/code-server-boilerplates/nodejs-starter .",
+      "build": "npm run build:buildkit",
+      "start": "docker-compose up -d",
+      "logs": "docker-compose logs --follow --timestamps --tail=all",
+      "ci:trigger-gha": "./scripts/trigger-rebuild",
+      "shellcheck:entrypoint": "shellcheck toolkits/containers/entrypoint.sh",
+      "shellcheck:scripts": "shellcheck scripts/commit scripts/trigger-rebuild"
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog",
+        "defaultScope": "global"
+      }
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/code-server-boilerplates/starter-pack.git"
+    },
+    "author": "Community Maintainers <community-maintainers@madebythepins.tk>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/code-server-boilerplates/starter-pack/issues"
+    },
+    "homepage": "https://github.com/code-server-boilerplates/starter-pack#readme",
+    "dependencies": {
+      "@commitlint/cli": "^12.1.4",
+      "@commitlint/config-conventional": "^12.1.4",
+      "commitizen": "^4.2.4",
+      "cz-conventional-changelog": "^3.3.0",
+      "husky": "^6.0.0"
+    }
+  }
