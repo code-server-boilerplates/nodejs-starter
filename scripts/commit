@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -d "node_modules" ]; then
+   echo "node_modules not found, installing Node deps..."
+   npm i
+fi
+
+# Call the cz scipt directly, instead using the npm way
+./node_modules/.bin/cz --signoff
