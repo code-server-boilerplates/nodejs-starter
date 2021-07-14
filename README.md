@@ -7,9 +7,9 @@ This deploy-code-server template uses the `starter-pack` GHCR image as its base 
 * Everything in `starter-pack`, plus:
   * Node.js 14.x LTS, through Node Version Manager
   * Latest versions of Yarn and npmjs
-  * Railway CLI, Heroku CLI, Vercel CLI, you name it.
-  * Eslint and Prettier for linting and formatting
-  * Commitlint and Commitizen for commit message format enforcement
+  * Railway CLI, Heroku CLI, Vercel CLI, you name it. (we need to add more of them)
+  * Eslint and Prettier for linting and formatting (and some plugins for seeding this image, PRs are always welcome!)
+  * Commitlint and Commitizen for commit message format enforcement, among other maintainer tools
   * Miscellaneous stuff like `@vercel/ncc`, `@vercel/pkg` and `npkill`
 
 ## Checklist for new template maintainers
