@@ -41,4 +41,4 @@ RUN .local/bin/global-npm-install \
 RUN .local/bin/global-npm-install commitizen cz-conventional-changelog @commitlint/cli
 
 # Miscellenous
-RUN .local/bin/global-npm-install npkill @vercel/ncc release 
+RUN .local/bin/global-npm-install npkill @vercel/ncc release
