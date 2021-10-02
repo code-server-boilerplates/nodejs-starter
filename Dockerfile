@@ -12,7 +12,7 @@ LABEL org.opencontainers.image.source="https://github.com/code-server-boilerplat
 # @namespace/template-slug
 ENV TEMPLATE_SLUG_PREFIX="@code-server-boilerplates/nodejs-starter" \
     # Hard-code Node.js version, but we automate upgrades through Autofix npm package.
-    NODE_VERSION=14.17.4
+    NODE_VERSION=14.18.0
 
 # Copy our custom files from our source files
 COPY --chown=coder:coder toolkits/packages/scripts /home/coder/.local/bin
